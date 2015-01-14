@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>getyii - Document</title>
+<meta name="description" content="Flat UI Kit Free is a Twitter Bootstrap Framework design and Theme, this responsive framework includes a PSD and HTML version." />
+<meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+<!-- Loading Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Loading Flat UI -->
+
+<link rel="shortcut icon" href="img/favicon.ico">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+<!--[if lt IE 9]>
+      <script src="dist/js/vendor/html5shiv.js"></script>
+      <script src="dist/js/vendor/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9" role="main">
+		    <h1 class="text-center">getyii</h1>
+							<div class="panel panel-info" id="table-migration">
+                    <div class="panel-heading">migration</div>
+					<table class="table table-condensed">
+					    <tr>
+					       <th>字段名</th>
+					       <th>字段类型</th>
+					       <th>字段说明</th>
+					    </tr>
+					    						<tr>
+							<td>version</td>
+							<td>varchar(180)</td>
+							<td></td>
+						</tr>
+												<tr>
+							<td>apply_time</td>
+							<td>int(11)</td>
+							<td></td>
+						</tr>
+											</table>
+				</div>
+				<hr>
+		    				<div class="panel panel-info" id="table-post">
+                    <div class="panel-heading">post</div>
+					<table class="table table-condensed">
+					    <tr>
+					       <th>字段名</th>
+					       <th>字段类型</th>
+					       <th>字段说明</th>
+					    </tr>
+					    						<tr>
+							<td>id</td>
+							<td>int(11)</td>
+							<td></td>
+						</tr>
+												<tr>
+							<td>post_meta_id</td>
+							<td>int(11) unsigned</td>
+							<td>版块ID</td>
+						</tr>
+												<tr>
+							<td>user_id</td>
+							<td>int(11) unsigned</td>
+							<td>作者ID</td>
+						</tr>
+												<tr>
+							<td>title</td>
+							<td>varchar(255)</td>
+							<td>标题</td>
+						</tr>
+												<tr>
+							<td>author</td>
+							<td>varchar(100)</td>
+							<td>作者</td>
+						</tr>
+												<tr>
+							<td>excerpt</td>
+							<td>varchar(255)</td>
+							<td>摘要</td>
+						</tr>
+												<tr>
+							<td>image</td>
+							<td>varchar(255)</td>
+							<td>封面图片</td>
+						</tr>
+												<tr>
+							<td>content</td>
+							<td>text</td>
+							<td>内容</td>
+						</tr>
+												<tr>
+							<td>tags</td>
+							<td>varchar(255)</td>
+							<td>标签 用空格隔开</td>
+						</tr>
+												<tr>
+							<td>view_count</td>
+							<td>int(11) unsigned</td>
+							<td>查看数</td>
+						</tr>
+												<tr>
+							<td>comment_count</td>
+							<td>int(11) unsigned</td>
+							<td>评论数</td>
+						</tr>
+												<tr>
+							<td>favorite_count</td>
+							<td>int(11) unsigned</td>
+							<td>收藏数</td>
+						</tr>
+												<tr>
+							<td>like_count</td>
+							<td>int(11) unsigned</td>
+							<td>喜欢数</td>
+						</tr>
+												<tr>
+							<td>hate_count</td>
+							<td>int(11) unsigned</td>
+							<td>讨厌数</td>
+						</tr>
+												<tr>
+							<td>status</td>
+							<td>tinyint(1)</td>
+							<td>状态 1:发布 0：草稿</td>
+						</tr>
+												<tr>
+							<td>order</td>
+							<td>int(11) unsigned</td>
+							<td>排序 0最大</td>
+						</tr>
+												<tr>
+							<td>created_at</td>
+							<td>int(11) unsigned</td>
+							<td>创建时间</td>
+						</tr>
+												<tr>
+							<td>updated_at</td>
+							<td>int(11) unsigned</td>
+							<td>修改时间</td>
+						</tr>
+											</table>
+				</div>
+				<hr>
+		    				<div class="panel panel-info" id="table-post_comment">
+                    <div class="panel-heading">post_comment</div>
+					<table class="table table-condensed">
+					    <tr>
+					       <th>字段名</th>
+					       <th>字段类型</th>
+					       <th>字段说明</th>
+					    </tr>
+					    						<tr>
+							<td>id</td>
+							<td>int(11)</td>
+							<td></td>
+						</tr>
+												<tr>
+							<td>parent</td>
+							<td>int(11) unsigned</td>
+							<td>父级评论</td>
+						</tr>
+												<tr>
+							<td>post_id</td>
+							<td>int(11) unsigned</td>
+							<td>文章ID</td>
+						</tr>
+												<tr>
+							<td>comment</td>
+							<td>text</td>
+							<td>评论</td>
+						</tr>
+												<tr>
+							<td>status</td>
+							<td>tinyint(1)</td>
+							<td>1为正常 0为禁用</td>
+						</tr>
+												<tr>
+							<td>user_id</td>
+							<td>int(11) unsigned</td>
+							<td>用户ID</td>
+						</tr>
+												<tr>
+							<td>ip</td>
+							<td>varchar(255)</td>
+							<td>评论者ip地址</td>
+						</tr>
+												<tr>
+							<td>created_at</td>
+							<td>int(11) unsigned</td>
+							<td>创建时间</td>
+						</tr>
+											</table>
+				</div>
+				<hr>
+		    				<div class="panel panel-info" id="table-post_meta">
+                    <div class="panel-heading">post_meta</div>
+					<table class="table table-condensed">
+					    <tr>
+					       <th>字段名</th>
+					       <th>字段类型</th>
+					       <th>字段说明</th>
+					    </tr>
+					    						<tr>
+							<td>id</td>
+							<td>int(11)</td>
+							<td></td>
+						</tr>
+												<tr>
+							<td>name</td>
+							<td>varchar(100)</td>
+							<td>名称</td>
+						</tr>
+												<tr>
+							<td>type</td>
+							<td>varchar(32)</td>
+							<td>项目类型</td>
+						</tr>
+												<tr>
+							<td>description</td>
+							<td>varchar(255)</td>
+							<td>选项描述</td>
+						</tr>
+												<tr>
+							<td>count</td>
+							<td>int(11) unsigned</td>
+							<td>项目所属内容个数</td>
+						</tr>
+												<tr>
+							<td>order</td>
+							<td>int(11) unsigned</td>
+							<td>项目排序</td>
+						</tr>
+												<tr>
+							<td>created_at</td>
+							<td>int(11) unsigned</td>
+							<td>创建时间</td>
+						</tr>
+												<tr>
+							<td>updated_at</td>
+							<td>int(11) unsigned</td>
+							<td>修改时间</td>
+						</tr>
+											</table>
+				</div>
+				<hr>
+		    				<div class="panel panel-info" id="table-post_tag">
+                    <div class="panel-heading">post_tag</div>
+					<table class="table table-condensed">
+					    <tr>
+					       <th>字段名</th>
+					       <th>字段类型</th>
+					       <th>字段说明</th>
+					    </tr>
+					    						<tr>
+							<td>id</td>
+							<td>int(11)</td>
+							<td></td>
+						</tr>
+												<tr>
+							<td>name</td>
+							<td>varchar(20)</td>
+							<td>名称</td>
+						</tr>
+												<tr>
+							<td>count</td>
+							<td>int(11) unsigned</td>
+							<td>计数</td>
+						</tr>
+												<tr>
+							<td>created_at</td>
+							<td>int(11) unsigned</td>
+							<td>创建时间</td>
+						</tr>
+												<tr>
+							<td>updated_at</td>
+							<td>int(11)</td>
+							<td>修改时间</td>
+						</tr>
+											</table>
+				</div>
+				<hr>
+		    				<div class="panel panel-info" id="table-user">
+                    <div class="panel-heading">user</div>
+					<table class="table table-condensed">
+					    <tr>
+					       <th>字段名</th>
+					       <th>字段类型</th>
+					       <th>字段说明</th>
+					    </tr>
+					    						<tr>
+							<td>id</td>
+							<td>int(11)</td>
+							<td></td>
+						</tr>
+												<tr>
+							<td>username</td>
+							<td>varchar(255)</td>
+							<td></td>
+						</tr>
+												<tr>
+							<td>avatar</td>
+							<td>varchar(255)</td>
+							<td>头像</td>
+						</tr>
+												<tr>
+							<td>auth_key</td>
+							<td>varchar(32)</td>
+							<td></td>
+						</tr>
+												<tr>
+							<td>password_hash</td>
+							<td>varchar(255)</td>
+							<td></td>
+						</tr>
+												<tr>
+							<td>password_reset_token</td>
+							<td>varchar(255)</td>
+							<td></td>
+						</tr>
+												<tr>
+							<td>email</td>
+							<td>varchar(255)</td>
+							<td></td>
+						</tr>
+												<tr>
+							<td>role</td>
+							<td>smallint(6)</td>
+							<td></td>
+						</tr>
+												<tr>
+							<td>status</td>
+							<td>smallint(6)</td>
+							<td></td>
+						</tr>
+												<tr>
+							<td>created_at</td>
+							<td>int(11)</td>
+							<td></td>
+						</tr>
+												<tr>
+							<td>updated_at</td>
+							<td>int(11)</td>
+							<td></td>
+						</tr>
+											</table>
+				</div>
+				<hr>
+		    				<div class="panel panel-info" id="table-user_auth">
+                    <div class="panel-heading">user_auth</div>
+					<table class="table table-condensed">
+					    <tr>
+					       <th>字段名</th>
+					       <th>字段类型</th>
+					       <th>字段说明</th>
+					    </tr>
+					    						<tr>
+							<td>id</td>
+							<td>int(11)</td>
+							<td></td>
+						</tr>
+												<tr>
+							<td>user_id</td>
+							<td>int(11) unsigned</td>
+							<td>用户ID</td>
+						</tr>
+												<tr>
+							<td>type</td>
+							<td>varchar(100)</td>
+							<td>联合登录类型</td>
+						</tr>
+												<tr>
+							<td>token</td>
+							<td>varchar(255)</td>
+							<td></td>
+						</tr>
+												<tr>
+							<td>openid</td>
+							<td>varchar(255)</td>
+							<td></td>
+						</tr>
+												<tr>
+							<td>created_at</td>
+							<td>int(11) unsigned</td>
+							<td>创建时间</td>
+						</tr>
+											</table>
+				</div>
+				<hr>
+		    				<div class="panel panel-info" id="table-user_meta">
+                    <div class="panel-heading">user_meta</div>
+					<table class="table table-condensed">
+					    <tr>
+					       <th>字段名</th>
+					       <th>字段类型</th>
+					       <th>字段说明</th>
+					    </tr>
+					    						<tr>
+							<td>id</td>
+							<td>int(11)</td>
+							<td></td>
+						</tr>
+												<tr>
+							<td>user_id</td>
+							<td>int(11) unsigned</td>
+							<td>用户ID</td>
+						</tr>
+												<tr>
+							<td>type</td>
+							<td>varchar(100)</td>
+							<td>操作类型</td>
+						</tr>
+												<tr>
+							<td>value</td>
+							<td>varchar(255)</td>
+							<td>操作类型值</td>
+						</tr>
+												<tr>
+							<td>target_id</td>
+							<td>int(11) unsigned</td>
+							<td>目标id</td>
+						</tr>
+												<tr>
+							<td>target_type</td>
+							<td>varchar(100)</td>
+							<td>目标类型</td>
+						</tr>
+												<tr>
+							<td>created_at</td>
+							<td>int(11) unsigned</td>
+							<td>创建时间</td>
+						</tr>
+											</table>
+				</div>
+				<hr>
+		    			</div>
+			<div class="col-md-3">
+				<ul>
+				    					<li>
+						<a href="#table-migration">
+	    					migration						</a>
+					</li>
+										<li>
+						<a href="#table-post">
+	    					post						</a>
+					</li>
+										<li>
+						<a href="#table-post_comment">
+	    					post_comment						</a>
+					</li>
+										<li>
+						<a href="#table-post_meta">
+	    					post_meta						</a>
+					</li>
+										<li>
+						<a href="#table-post_tag">
+	    					post_tag						</a>
+					</li>
+										<li>
+						<a href="#table-user">
+	    					user						</a>
+					</li>
+										<li>
+						<a href="#table-user_auth">
+	    					user_auth						</a>
+					</li>
+										<li>
+						<a href="#table-user_meta">
+	    					user_meta						</a>
+					</li>
+									</ul>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

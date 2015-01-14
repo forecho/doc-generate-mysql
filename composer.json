@@ -1,0 +1,10 @@
+{
+  "name" : "doc.generate.mysql",
+  "require" : {
+    "twig/twig" : "=v1.16.2"
+  },
+  "repositories" : [ {
+    "type" : "composer",
+    "url" : "https://packagist.org/"
+  } ]
+}
