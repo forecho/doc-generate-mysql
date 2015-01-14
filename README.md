@@ -1,3 +1,6 @@
+##截图
+![数据库文档](https://raw.githubusercontent.com/forecho/doc-generate-mysql/master/demo.png)
+
 ##具体用法
 
 1. 安装[Composer](http://docs.phpcomposer.com/download/) 
